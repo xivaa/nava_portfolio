@@ -5,10 +5,9 @@ import HabitTracker from "../components/HabitTracker";
 import MauiQuality from "../components/MauiQuality";
 import MacbookScene from "../components/Macbook";
 
-
-
 const Projects = ({projectsRef}) => {
   const [selectedProject, setSelectedProject] = useState(0);
+  const wordsToHighlight = ['ruby', 'rails', 'react', 'native', 'firebase', 'database', 'javascript', 'css', 'tailwind', 'vite', 'threejs']
 
   const handleProjectChange = (direction) => {
     if (direction === 'next') {
@@ -17,6 +16,21 @@ const Projects = ({projectsRef}) => {
       setSelectedProject((prev) => (prev - 1 + PROJECTS.length) % PROJECTS.length);
     }
   }
+
+  const highlightWords = (paragraph) => {
+    return paragraph.split(' ').map((word, index) => {
+      const cleanWord = word.replace(/[.,!?]/g, ''); 
+      if (wordsToHighlight.includes(cleanWord.toLowerCase())) {
+        return (
+          <span key={index} style={{ color: '#7dcf89' }}>
+            {word.toUpperCase()}{' '}
+          </span>
+        );
+      }
+
+      return <span key={index}>{word} </span>;
+    });
+  };
 
   return (      
         <section ref={projectsRef} className="w-screen h-screen md:h-screen flex flex-col items-center justify-center lg:justify-end relative overflow-hidden p-3">
@@ -41,7 +55,7 @@ const Projects = ({projectsRef}) => {
                     <div className="w-full md:max-w-[45%] md:h-full p-2.5 lg:p-9 pb-[50%] sm:pb-0 ">
                         <h1 className="font-mono text-lg sm:text-3xl md:text-4xl" style={{color: '#7dcf89'}}>{PROJECTS[selectedProject].title.toUpperCase()}</h1>
 
-                        <p className="text-justify md:max-w-[81%] max-w-[90%] md:relative md:top-[12%] text-base">{PROJECTS[selectedProject].description}</p>
+                        <p className="text-justify md:max-w-[81%] max-w-[90%] md:relative md:top-[12%] text-base">{highlightWords(PROJECTS[selectedProject].description)}</p>
 
                         <div className="absolute bottom-3 right-3 md:bottom-8 md:right-[10%] flex flex-row justifty-center items-center" >
                             <button onClick={() => handleProjectChange('prev')} className="mr-3 focus:outline-none bg-transparent hover:border-emerald-400"><IoIosArrowRoundBack size={'4.2vw'}/></button>

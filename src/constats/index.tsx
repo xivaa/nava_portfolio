@@ -61,25 +61,16 @@ export const PROJECTS = [
     {
         index: 0,
         title: 'Habit Tracker',
-        description: 'Built with Ruby on Rails, the app allows the user to set goals and then create habits that will get them closer to their goals. This was my first coding project.',
-        first_image: '',
-        second_image: '',
-        third_image: '',
+        description: 'Built with Ruby on Rails, Javascript, HTML and CSS this app enables users to set goals and create habits to achieve them. It was my first coding project.',
     },
     {
         index: 1, 
         title: 'Operation System',
-        description: 'Built with React Native and using firebase for the database, the app was an innovative change for the compan. Allowed the owner, team and clients to have a better communication and organization as it provided all the information anyone needed depending on their role.',
-        first_image: '',
-        second_image: '',
-        third_image: '',
+        description: 'Built with React Native and Firebase, this app brought innovative changes to the company by improving communication and organization. It provided tailored information for the owner, team, and clients based on their roles',
     },
     {
         index: 2,
         title: 'This Portfolio',
-        description: 'Built with Vite, React, Tailwind CSS, and Three.js. This is a display of my skills and the technologies I enjoy using as I believe they are the future of web development.',
-        first_image: '',
-        second_image: '',
-        third_image: '',
+        description: 'Built with Vite, React, Tailwind CSS, and Three.js, this project showcases my skills and highlights the technologies I enjoy working with, as I believe they represent the future of web development.',
     },
 ]

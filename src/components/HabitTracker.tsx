@@ -26,7 +26,7 @@ const Phone = () => {
       }, []);
   
     return (
-      <group ref={phoneRef}>  {/* Grouping phone and screen together */}
+      <group ref={phoneRef}>  
         <primitive object={scene} position={[0, 0, 0]} scale={[2, 2, 2]} rotation={[0, Math.PI, 0]} />
         <mesh position={screenPosition} scale={screenScale}>
           <planeGeometry args={[1, 1.5]} /> 
