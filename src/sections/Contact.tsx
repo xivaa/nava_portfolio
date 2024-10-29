@@ -1,7 +1,6 @@
 import { CiMail, CiMapPin } from "react-icons/ci";
 import AstronautScene from "../components/Astronaut";
 import { CONTACT } from "../constats/index";
-import { useRef } from "react";
 import { PiGithubLogoThin } from "react-icons/pi";
 
 const Contact = ({contactRef}) => {
@@ -14,7 +13,7 @@ const Contact = ({contactRef}) => {
         </p>
       </div>
       <div className="flex flex-col md:flex-row justify-center items-center w-[90vw] lg:w-[80vw] h-[75vh] z-1">
-        <div className="glass-btn flex flex-col md:flex-row items-center justify-between w-full h-full p-3" >
+        <div className="glass-btn flex flex-col md:flex-row items-center justify-between w-full h-full p-3 overflow-hidden" >
           <div className="contact-info flex flex-col items-center  sm:items-start justify-center ">
             <h2 className="text-xl font-semibold mb-4">Get in Touch</h2>
             <div className="space-y-2 ">
@@ -29,7 +28,7 @@ const Contact = ({contactRef}) => {
               </p>
             </div>
           </div>
-          <div className="h-full mt-3 md:mt-0 w-full md:w-[80%] flex justify-center items-center overflow-hidden">
+          <div className="h-full mt-3 md:mt-0 w-full md:w-[80%] flex justify-center items-center overflow-hidden" style={{borderRadius: 12}}>
             <AstronautScene />
           </div>
         </div>

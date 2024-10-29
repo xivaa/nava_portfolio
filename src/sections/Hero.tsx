@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import SunScene from "../components/SunScene";
-import { MdArrowOutward } from "react-icons/md";
 
 const Hero = ({heroRef}) => {
     const [isWatch, setIsWatch] = useState(window.innerWidth < 351);
@@ -41,17 +40,3 @@ const Hero = ({heroRef}) => {
 
 export default Hero;
     
-    {/* <div className="glass-btn  flex flex-col n rounded-xl max-w-xl "  >
-        <p className="text-slate-100 text-center text-justify" style={{ letterSpacing: 1 , fontSize: 45, maxWidth: '87%' }}>
-        Hey, I'm Alfonso
-        </p>
-        <br/>
-        <p className="text-slate-100 text-center text-justify leading-relaxed mb-8 " style={{ letterSpacing: 1 , fontSize: 21,maxWidth: '87%' }}>
-        using the most disruptive technologies i create digital solutions for real life problems
-        </p>
-        <div className='img-2 rounded-xl mt-8' />
-        <br/>
-        <button className="btn text-slate-100 hover:border-emerald-400 focus:outline-none justify-end">
-            lets work together<MdArrowOutward color="white" className="ml-1" /> 
-        </button>
-    </div> */}

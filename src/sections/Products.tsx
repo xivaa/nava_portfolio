@@ -1,15 +1,12 @@
-import { useEffect } from "react";
-import { Services } from "../constants/index.tsx";
-import { MdArrowOutward } from "react-icons/md";
 import { EXPERIENCE } from "../constats/index.tsx";
 
 const ProductCard = ({ title, year, description }) => {
-    const wordsToHighlight = ['full-stack', 'developer', 'harvardx\'s', 'Metricas', 'startup', 'bootcamp', 'ruby', 'on', 'rails', 'python', 'react', 'native', 'sql', 'c', 'aws', 'firebase' ]
+    const wordsToHighlight = ['full-stack', 'developer', 'harvardx\'s', 'Metricas', 'startup', 'bootcamp', 'ruby', 'on', 'rails', 'python', 'react', 'native', 'sql', 'c', 'aws', 'firebase', 'javascript', 'apis' ]
     const jr = 'jr'
 
     const highlightWords = (paragraph) => {
         return paragraph.split(' ').map((word, index) => {
-            const cleanWord = word.replace(/[.,!?]/g, ''); 
+            const cleanWord = word.replace(/[.,'!?]/g, ''); 
             if (wordsToHighlight.includes(cleanWord.toLowerCase())) {
                 return (
                     <span key={index} style={{ color: '#7dcf89' }}>

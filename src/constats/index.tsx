@@ -1,35 +1,30 @@
-import { BsPersonWorkspace } from "react-icons/bs"
-import { CiFolderOn, CiHome } from "react-icons/ci"
-import { GrContactInfo } from "react-icons/gr"
-import { SiAboutdotme } from "react-icons/si"
-
 export const EXPERIENCE = [
     {
         title: 'Le Wagon\'s FULL-STACK certification',
         year: '2022',
-        description: '9 week intensive coding bootcamp where I learned to build web applications from scratch. I learned to use Ruby on Rails, JavaScript, HTML, CSS and SQL. I also learned to work with APIs, deploy applications and work in a team environment. This was my first approach to coding and I loved it.'
+        description: 'A 9-week intensive coding bootcamp where I learned to build web applications from scratch using Ruby on Rails, JavaScript, HTML, CSS, and SQL. I gained experience working with API\'s, deploying applications, and collaborating in a team environment. This was my first exposure to coding, and I loved every moment.'
     },
     {
         title: 'HARVARDX\'S CS50 certification',
         year: '2023',
-        description: "I took this course to strengthen my foundation in computer science, covering algorithms, data structures, cryptography, and more. Starting with C, I later worked with Python and JavaScript for the final project, gaining insight into language similarities. Post-certification, I also pursued Mobile Development with React Native."
+        description: "I took this course to solidify my computer science foundation, focusing on algorithms, data structures, and cryptography. Starting with C, I then utilized Python and JavaScript for my final project, gaining insights into language similarities. After certification, I pursued Mobile Development with React Native."
     },
     {
         title: 'Jr DEVELOPER at METRICAS',
         year: '2024',
-        description: "My first work experience in the industry. As a Jr Developer, I collaborated with a talented team using AWS, Python, and React Native. My key responsibility was developing Python-based Lambda functions, which powered the front-end data displays. This role taught me how to thrive in a professional environment."
+        description: "In my first industry role as a Jr. Developer, I collaborated with a skilled team using AWS, Python, and React Native. I focused on developing Python-based Lambda functions to support front-end data displays, gaining valuable experience in a professional environment."
     },
     {
         title: 'Solo DEVELOPER for Startup',
         year: '2024',
-        description: "I built a mobile app for a growing cleaning company, optimizing team and client management. Using React Native and Firebase, I developed a modern, efficient solution while learning the importance of communication and aligning with client needs."
+        description: "I developed a mobile app for a growing cleaning company to optimize team and client management, using React Native for cross-platform functionality and Firebase for real-time data management. This project emphasized the importance of clear communication and aligning with client needs to deliver an effective solution."
     }
 ]
 
 export const Aboutme = {
     title: 'ABOUT ME',
-    first_paragraph: 'Im a passionate developer who enjoys creating digital solutions for real life problems. Im driven by challenges and find great satisfaction in creating solutions that have a meaningful impact. When im not coding, I balance my time with physical activities like hitting the gym, running and surfing (whenever I can), which help me stay focused.',
-    second_paragraph: 'In my development work I enjoy working with python for the backend and react with typescript for the front end, although  I\'m eager to learn and open to work with any technology. Currently im taking a course on Data Science as I believe in lifelong learning.',
+    first_paragraph: 'I\'m a passionate developer dedicated to crafting digital solutions that address real-world challenges. Driven by curiosity and a love for problem-solving, I find deep satisfaction in creating impactful, meaningful experiences through code. Outside of development, I keep balanced and focused through physical activities like going to the gym, running, and surfing whenever I get the chance.',
+    second_paragraph: 'In my development work, I enjoy working with Python for backend development and React with TypeScript for the frontend. I\'m always eager to learn and open to exploring new technologies. Currently, I\'m taking a course in Data Science, as I strongly believe in lifelong learning and continuous growth.',
     third_paragraph: 'I am stationed in Mexico City but open to work remotely anywhere in the world.'
 }
 
@@ -44,27 +39,22 @@ export const NAV_TABS = [
     {
         title: 'HOME',
         link: '/#home',
-        icon: <CiHome />
     },
     {
         title: 'ABOUT',
         link: '/#about',
-        icon: <SiAboutdotme />,
     },
     {
         title: 'EXPERIENCE',
         link: '/#experience',
-        icon: <BsPersonWorkspace />,
     },
     {
         title: 'PROJECTS',
         link: '/#projects',
-        icon: <CiFolderOn />,
     },
     {
         title: 'CONTACT',
         link: '/#contact',
-        icon: <GrContactInfo />,
     },
 ]
 export const PROJECTS = [
