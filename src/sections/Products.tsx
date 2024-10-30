@@ -1,10 +1,11 @@
 import { EXPERIENCE } from "../constats/index.tsx";
+import { ProductCardProps, SectionProps } from "../constats/types.tsx";
 
-const ProductCard = ({ title, year, description }) => {
+const ProductCard = ({ title, year, description }: ProductCardProps) => {
     const wordsToHighlight = ['full-stack', 'developer', 'harvardx\'s', 'Metricas', 'startup', 'bootcamp', 'ruby', 'on', 'rails', 'python', 'react', 'native', 'sql', 'c', 'aws', 'firebase', 'javascript', 'apis' ]
     const jr = 'jr'
 
-    const highlightWords = (paragraph) => {
+    const highlightWords = (paragraph: string) => {
         return paragraph.split(' ').map((word, index) => {
             const cleanWord = word.replace(/[.,'!?]/g, ''); 
             if (wordsToHighlight.includes(cleanWord.toLowerCase())) {
@@ -23,6 +24,7 @@ const ProductCard = ({ title, year, description }) => {
             return <span key={index}>{word} </span>;
         });
     };
+
     return (
         <div className="product-card xl:hover:w-[40%] w-[90%] lg:w-[80vw] h-auto min-h-full xl:w-[25%] lg:h-full py-3 px-0 xl:px-3">
             <div className="glass-filter h-full w-full">
@@ -38,10 +40,10 @@ const ProductCard = ({ title, year, description }) => {
   };
   
 
-const Products = ({experienceRef}) => {
+const Products = ({sectionRef}: SectionProps) => {
 
     return (
-        <section ref={experienceRef} className="w-screen min-h-screen h-auto xl:h-screen flex flex-col items-center justify-center lg:justify-end relative overflow-hidden">
+        <section ref={sectionRef} className="w-screen min-h-screen h-auto xl:h-screen flex flex-col items-center justify-center lg:justify-end relative overflow-hidden">
             <div className="mt-6 mb-6 w-[90%] sm:w-full flex items-center justify-center">
                 <p className="font-mono text-3xl sm:text-4xl md:text-5xl lg:text-7xl sm:tracking-widest truncate" >
                 EXPERIENCE

@@ -1,10 +1,11 @@
 import { Aboutme } from "../constats/index";
 import ThrophyScene from "../components/Thropy";
+import { SectionProps } from "../constats/types";
 
-const About = ({aboutRef}) => {
+const About = ({sectionRef}: SectionProps) => {
     const wordsToStyle = ['passionate', 'creating', 'solutions', 'challenges', 'impact', 'balance', 'coding', 'focused', 'development', 'python', 'react', 'typescript', 'mexico', 'city' ];
   
-    const highlightWords = (paragraph) => {
+    const highlightWords = (paragraph: string) => {
       return paragraph.split(' ').map((word, index) => {
         const cleanWord = word.replace(/[.,!?]/g, ''); 
         if (wordsToStyle.includes(cleanWord.toLowerCase())) {
@@ -20,7 +21,7 @@ const About = ({aboutRef}) => {
     };
   
     return (
-        <section ref={aboutRef} className=" w-screen min-h-screen h-auto md:h-screen flex flex-col items-center lg:pb-[60px] xl:pb-0 justify-center lg:justify-end relative p-3">
+        <section ref={sectionRef} className=" w-screen min-h-screen h-auto md:h-screen flex flex-col items-center lg:pb-[60px] xl:pb-0 justify-center lg:justify-end relative p-3">
             <div className='mb-6 w-full flex items-center justify-center'>
             <p className="font-mono text-3xl sm:text-4xl md:text-5xl lg:text-7xl sm:tracking-widest truncate mb-3 md:mb-0" >
                     {Aboutme.title}

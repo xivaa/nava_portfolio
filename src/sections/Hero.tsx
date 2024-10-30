@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
 import SunScene from "../components/SunScene";
+import { SectionProps } from "../constats/types";
 
-const Hero = ({heroRef}) => {
+const Hero = ({sectionRef}: SectionProps) => {
     const [isWatch, setIsWatch] = useState(window.innerWidth < 351);
   
     useEffect(() => {
@@ -16,7 +17,7 @@ const Hero = ({heroRef}) => {
       };
     }, []);
     return (
-        <section ref={heroRef} className="w-screen h-screen flex flex-col items-center justify-center relative z-1 ">
+        <section ref={sectionRef} className="w-screen h-screen flex flex-col items-center justify-center relative z-1 ">
             <div className="flex flex-row items-center justify-center overflow-hidden rounded-xl w-[90%] lg:w-[80vw] h-[75vh]  border border-gray-800" style={{boxShadow: '0 9px 21px rgba(24, 90, 123, 0.3)'}}>
                 <div className="w-full h-full">
                     <SunScene />

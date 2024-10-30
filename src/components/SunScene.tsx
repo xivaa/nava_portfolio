@@ -1,12 +1,12 @@
 import { OrbitControls, useGLTF, Text } from "@react-three/drei";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { useEffect, useRef, useState } from "react";
-import { AnimationMixer } from "three";
+import { AnimationMixer, Mesh } from "three";
 
 const Sun = () => {
-    const sunRef = useRef();
+    const sunRef = useRef<Mesh>();
     const { scene, animations } = useGLTF('assets/camp.glb');
-    const mixer = useRef();
+    const mixer = useRef<AnimationMixer | null>();
   
     useEffect(() => {
         if (animations && animations.length > 0 && scene) {
@@ -24,7 +24,7 @@ const Sun = () => {
         };
     }, [animations, scene]);
   
-    useFrame((state, delta) => {
+    useFrame((_, delta) => {
         if (mixer.current) {
             mixer.current.update(delta);
         }

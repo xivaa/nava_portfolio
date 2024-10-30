@@ -2,11 +2,12 @@ import { CiMail, CiMapPin } from "react-icons/ci";
 import AstronautScene from "../components/Astronaut";
 import { CONTACT } from "../constats/index";
 import { PiGithubLogoThin } from "react-icons/pi";
+import { SectionProps } from "../constats/types";
 
-const Contact = ({contactRef}) => {
+const Contact = ({sectionRef}: SectionProps) => {
 
   return (
-    <section ref={contactRef} className="w-screen h-screen md:h-screen flex flex-col items-center justify-center lg:justify-end p-3 relative overflow-hidden">
+    <section ref={sectionRef} className="w-screen h-screen md:h-screen flex flex-col items-center justify-center lg:justify-end p-3 relative overflow-hidden">
       <div className='mb-6 w-full flex items-center justify-center'>
         <p className="font-mono text-3xl sm:text-4xl md:text-5xl lg:text-7xl sm:tracking-widest truncate mb-3 md:mb-0" >
           {CONTACT.title}

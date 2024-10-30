@@ -18,12 +18,11 @@ function App() {
   return (
     <main className="max-w-7xl mx-auto relative">
         <Navbar sections={[heroRef, infoRef, productsRef, projectsRef, contactRef]} />
-        {/* <Waves /> */}
-        <Hero heroRef={heroRef} />
-        <Info aboutRef={infoRef} />
-        <Products experienceRef={productsRef} />
-        <Projects projectsRef={projectsRef} />
-        <Contact contactRef={contactRef} />
+        <Hero sectionRef={heroRef} />
+        <Info sectionRef={infoRef} />
+        <Products sectionRef={productsRef} />
+        <Projects sectionRef={projectsRef} />
+        <Contact sectionRef={contactRef} />
     </main>
   );
 }

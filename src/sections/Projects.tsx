@@ -4,12 +4,13 @@ import { IoIosArrowRoundBack, IoIosArrowRoundForward } from "react-icons/io";
 import HabitTracker from "../components/HabitTracker";
 import MauiQuality from "../components/MauiQuality";
 import MacbookScene from "../components/Macbook";
+import { SectionProps } from "../constats/types";
 
-const Projects = ({projectsRef}) => {
+const Projects = ({sectionRef}: SectionProps) => {
   const [selectedProject, setSelectedProject] = useState(0);
   const wordsToHighlight = ['ruby', 'rails', 'react', 'native', 'firebase', 'database', 'javascript', 'css', 'tailwind', 'vite', 'threejs']
 
-  const handleProjectChange = (direction) => {
+  const handleProjectChange = (direction: string) => {
     if (direction === 'next') {
       setSelectedProject((prev) => (prev + 1) % PROJECTS.length);
     } else {
@@ -17,7 +18,7 @@ const Projects = ({projectsRef}) => {
     }
   }
 
-  const highlightWords = (paragraph) => {
+  const highlightWords = (paragraph: string) => {
     return paragraph.split(' ').map((word, index) => {
       const cleanWord = word.replace(/[.,!?]/g, ''); 
       if (wordsToHighlight.includes(cleanWord.toLowerCase())) {
@@ -33,7 +34,7 @@ const Projects = ({projectsRef}) => {
   };
 
   return (      
-        <section ref={projectsRef} className="w-screen h-screen md:h-screen flex flex-col items-center justify-center lg:justify-end relative overflow-hidden p-3">
+        <section ref={sectionRef} className="w-screen h-screen md:h-screen flex flex-col items-center justify-center lg:justify-end relative overflow-hidden p-3">
             <div className="mb-6 w-[90%] sm:w-full flex items-center justify-center">
                 <p className="font-mono text-3xl sm:text-4xl md:text-5xl lg:text-7xl sm:tracking-widest truncate mb-3 md:mb-0" >
                 PROJECTS

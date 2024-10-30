@@ -20,21 +20,18 @@ export const EXPERIENCE = [
         description: "I developed a mobile app for a growing cleaning company to optimize team and client management, using React Native for cross-platform functionality and Firebase for real-time data management. This project emphasized the importance of clear communication and aligning with client needs to deliver an effective solution."
     }
 ]
-
 export const Aboutme = {
     title: 'ABOUT ME',
     first_paragraph: 'I\'m a passionate developer dedicated to crafting digital solutions that address real-world challenges. Driven by curiosity and a love for problem-solving, I find deep satisfaction in creating impactful, meaningful experiences through code. Outside of development, I keep balanced and focused through physical activities like going to the gym, running, and surfing whenever I get the chance.',
     second_paragraph: 'In my development work, I enjoy working with Python for backend development and React with TypeScript for the frontend. I\'m always eager to learn and open to exploring new technologies. Currently, I\'m taking a course in Data Science, as I strongly believe in lifelong learning and continuous growth.',
     third_paragraph: 'I am stationed in Mexico City but open to work remotely anywhere in the world.'
 }
-
 export const CONTACT = {
     title: 'CONTACT',
     email: 'navafe.ga@gmail.com',
     github: 'github.com/xivaa',
     location: 'Mexico City, Mexico'
 }
-
 export const NAV_TABS = [
     {
         title: 'HOME',

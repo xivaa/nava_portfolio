@@ -4,24 +4,21 @@ import { useGLTF } from '@react-three/drei';
 import { AnimationMixer } from 'three';
 
 const Stars = () => {
-  const { scene, animations } = useGLTF('assets/sun.glb'); // Load the model and animations
+  const { scene, animations } = useGLTF('assets/sun.glb'); 
   const starsRef = useRef();
-  const mixer = useRef();
+  const mixer = useRef<AnimationMixer | null>();
 
   useEffect(() => {
     if (animations && animations.length > 0 && scene) {
-      // Create an AnimationMixer and play the first animation
       mixer.current = new AnimationMixer(scene);
 
-      // Play the first animation in the GLB file
       const action = mixer.current.clipAction(animations[0]);
 
-      action.setEffectiveTimeScale(1); // Slow down the animation (0.5 is half-speed, adjust as needed)
+      action.setEffectiveTimeScale(1); 
       action.play();
     }
 
     return () => {
-      // Cleanup the mixer when the component unmounts
       if (mixer.current) {
         mixer.current.stopAllAction();
         mixer.current = null;
@@ -29,8 +26,7 @@ const Stars = () => {
     };
   }, [animations, scene]);
 
-  // Update the mixer in each frame to advance the animation
-  useFrame((state, delta) => {
+  useFrame(( _,delta) => {
     if (mixer.current) {
       mixer.current.update(delta);
     }
